@@ -1,4 +1,4 @@
-Blob persistence
+Blob Persistence
 ================
 
 This repository contains blob persistence (memory) tests with the [OpenCV library for Processing](https://github.com/atduskgreg/opencv-processing) by Greg Borenstein.
