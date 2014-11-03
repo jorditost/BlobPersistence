@@ -1,7 +1,7 @@
 Blob Persistence
 ================
 
-This repository contains blob persistence (memory) tests with the [OpenCV library for Processing](https://github.com/atduskgreg/opencv-processing) by Greg Borenstein.
+This repository contains an implementation of [this](http://shiffman.net/2011/04/26/opencv-matching-faces-over-time/) blob persistence algorithm by Daniel Shiffman using the [OpenCV library for Processing](https://github.com/atduskgreg/opencv-processing) by Greg Borenstein.
 
 ## Following blobs over time
 
@@ -11,13 +11,13 @@ For some applications it may be important to "follow" a blob or an object over t
 
 ## Face memory
 
-The sketch [WhichFace](WhichFace) implements a persistence algorithm that follows faces over time. It is a modification of Daniel Shiffman's algorithm to work with the [OpenCV library for Processing](https://github.com/atduskgreg/opencv-processing) by Greg Borenstein (the [original code](http://shiffman.net/p5/whichface.zip) works with another -older- implementation of OpenCV)
+The sketch [WhichFace](https://github.com/jorditost/BlobPersistence/tree/master/WhichFace) implements a persistence algorithm that follows faces over time. It is a modification of Daniel Shiffman's algorithm to work with the [OpenCV library for Processing](https://github.com/atduskgreg/opencv-processing) by Greg Borenstein (the [original code](http://shiffman.net/p5/whichface.zip) works with another -older- implementation of OpenCV)
 
 ![](WhichFace/screenshots/whichface.png)
 
 Code:
-- [WhichFace.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/WhichFace/WhichFace.pde): main sketch
-- [Face.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/WhichFace/Face.pde): the Face class
+- [WhichFace.pde](https://github.com/jorditost/BlobPersistence/blob/master/WhichFace/WhichFace.pde): main sketch
+- [Face.pde](https://github.com/jorditost/BlobPersistence/blob/master/WhichFace/Face.pde): the Face class
 
 To see a detailed information of this algorithm visit Daniel Shiffman's blog:
 http://shiffman.net/2011/04/26/opencv-matching-faces-over-time/
