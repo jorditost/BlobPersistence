@@ -3,9 +3,12 @@
  * Daniel Shiffman
  * http://shiffman.net/2011/04/26/opencv-matching-faces-over-time/
  *
- * Modified by Jordi Tost to work with the OpenCV lib by Greg Borenstein:
+ * Modified by Jordi Tost (@jorditost) to work with the OpenCV library by Greg Borenstein:
  * https://github.com/atduskgreg/opencv-processing
- * @updated: 01/10/2014
+ *
+ * @url: https://github.com/jorditost/BlobPersistence/
+ *
+ * University of Applied Sciences Potsdam, 2014
  */
 
 import gab.opencv.*;
@@ -44,17 +47,8 @@ void draw() {
 
   image(video, 0, 0 );
   
-  //noFill();
-  //stroke(0, 255, 0);
-  //strokeWeight(3);
-  
   detectFaces();
 
-  /*for (int i = 0; i < faces.length; i++) {
-    println(faces[i].x + "," + faces[i].y);
-    rect(faces[i].x, faces[i].y, faces[i].width, faces[i].height);
-  }*/
-  
   // Draw all the faces
   for (int i = 0; i < faces.length; i++) {
     noFill();
@@ -74,7 +68,6 @@ void detectFaces() {
   
   // Faces detected in this frame
   faces = opencv.detect();
-  //println(faces.length);
   
   // Check if the detected faces already exist are new or some has disappeared. 
   
@@ -162,17 +155,6 @@ void detectFaces() {
       faceList.remove(i);
     } 
   }
-  
-  /*// Draw all the faces
-  for (int i = 0; i < faces.length; i++) {
-    noFill();
-    stroke(255,0,0);
-    rect(faces[i].x*scl,faces[i].y*scl,faces[i].width*scl,faces[i].height*scl);
-  }
-  
-  for (Face f : faceList) {
-    f.display();
-  }*/
 }
 
 void captureEvent(Capture c) {
